@@ -1,4 +1,4 @@
-package br.com.caelum.agenda.dao;
+package adiciona.Shows.Dao;
 
 import java.sql.Connection;
 
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 import java.util.List;
 
-import br.com.caelum.agenda.dao.ConnectionFactory;
+import adiciona.Shows.Dao.ConnectionFactory;
 import br.com.caelum.jdbc.modelo.Banda;
 
 public class ContatoDao {
@@ -19,7 +19,7 @@ public class ContatoDao {
 	
 	public ContatoDao() {
 		
-	this.connection = new ConnectionFactory().getConnection();
+	this.connection = new ConnectionFactory().getConnection(); 
 	
 	}
 	
@@ -50,9 +50,9 @@ public class ContatoDao {
 
 public List<Banda>getLista(){
 	try {
-		List<Banda>contatos=new ArrayList<Banda>();
+		List<Banda>bandas=new ArrayList<Banda>();
 		PreparedStatement stmt = this.connection.
-                prepareStatement("select * from contatos");
+                prepareStatement("select * from bandas");
         ResultSet rs = stmt.executeQuery();
       while(rs.next()) {
     	  Banda banda = new Banda();
@@ -63,19 +63,18 @@ public List<Banda>getLista(){
 
 
     	  
-    	  contatos.add(banda);
+    	  bandas.add(banda);
       }
     			  
       rs.close();
       stmt.close();
-      return contatos;
+      return bandas;
 	}catch(SQLException e) {
 		throw new RuntimeException(e);
 	}	
       }
 	public void altera(Banda banda) {
-	    String sql = "update contatos set nome=?, email=?, endereco=?," +
-	            "dataNascimento=? where id=?";
+	    String sql = "update contatos set nome=?, genero=? ";
 	    try {
 	        PreparedStatement stmt = connection.prepareStatement(sql);
 	        stmt.setString(1, banda.getNome());

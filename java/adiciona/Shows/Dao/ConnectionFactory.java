@@ -1,4 +1,4 @@
-package br.com.caelum.agenda.dao;
+package adiciona.Shows.Dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,7 +12,7 @@ public class ConnectionFactory {
     try {
             
             DriverManager.registerDriver(new com.mysql.jdbc.Driver()); 
-            return DriverManager.getConnection("jdbc:mysql://localhost/fj21", "root", "EGXTdt.2tbz3");
+            return DriverManager.getConnection("jdbc:mysql://localhost/shows", "root", "2304");
             } catch(SQLException e) {
                 e.printStackTrace();
                 throw new RuntimeException(e);

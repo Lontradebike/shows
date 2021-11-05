@@ -1,4 +1,4 @@
-package br.com.caelum.agenda.dao;
+package adiciona.Shows.Dao;
 
 public class DaoException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package br.com.caelum.agenda.dao;
+package adiciona.Shows.Dao;
 
 import java.sql.Connection;
 import java.sql.SQLException;

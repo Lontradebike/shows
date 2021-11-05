@@ -10,4 +10,16 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+	
+	
+			<servlet>
+				<servlet-name>BandaDao</servlet-name>
+				<servlet-class>adicona.Shows.Dao.ContatoDao</servlet-class>
+		</servlet>
+				<servlet-mapping>
+				<servlet-name>BandaDao</servlet-name>
+				<url-pattern>/AdicionaBanda</url-pattern>
+		</servlet-mapping>
+		
+	
 </web-app>
