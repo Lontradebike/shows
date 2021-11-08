@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import adiciona.Shows.Dao.ContatoDao;
-import br.com.caelum.jdbc.modelo.Banda;
+import br.com.modelo.Banda;
 
 @WebServlet("/adicionaBanda")
 public class AdicionaBandaServlet extends HttpServlet {
@@ -45,18 +45,13 @@ public class AdicionaBandaServlet extends HttpServlet {
         
         Connection connection = (Connection) request.getAttribute("conexao");
 		ContatoDao dao = new ContatoDao();
-		dao.adiciona(banda);
+		
 
 		RequestDispatcher rd = request
 				.getRequestDispatcher("/WEB-INF/jsp/Banda-adicionada.jsp");
 		rd.forward(request, response);
         dao.adiciona(banda);
 
-        out.println("<html>");
-        out.println("<body>");
-        out.println("Banda " + banda.getNome() +
-                " adicionado com sucesso");       
-        out.println("</body>");
-        out.println("</html>");
+       
     }
 }

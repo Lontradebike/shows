@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adiciona.Shows.Dao.ConnectionFactory;
-import br.com.caelum.jdbc.modelo.Banda;
+import br.com.modelo.Banda;
 
 public class ContatoDao {
 	

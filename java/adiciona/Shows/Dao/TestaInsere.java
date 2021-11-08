@@ -2,7 +2,7 @@ package adiciona.Shows.Dao;
 
 
 import adiciona.Shows.Dao.ContatoDao;
-import br.com.caelum.jdbc.modelo.Banda;
+import br.com.modelo.Banda;
 
 
 public class TestaInsere {
